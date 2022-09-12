@@ -5,12 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./redux/configStore";
+import { Route, Routes, unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import { HomeTemplate } from "./templates/HomeTemplate/HomeTemplate";
 
+export const history = createBrowserHistory({window})
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <App />
+    <App/>
   </Provider>
 );
 

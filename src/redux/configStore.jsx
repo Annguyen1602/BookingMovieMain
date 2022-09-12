@@ -1,5 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { applyMiddleware, combineReducers, createStore } from "redux";
+import thunk from "redux-thunk";
 
-export const store = configureStore({
-    reducer:{}
+const rootReducer = combineReducers({
+
 })
+
+export const store = createStore(rootReducer, applyMiddleware(thunk))
